@@ -4,29 +4,33 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
-?
+function soma(n1, n2) {
+  return n1 + n2;
+}
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-?
+var soma = soma(1, 2) + 5;
 
 // Qual o valor atualizado dessa variável?
-?
+8;
 
 // Declare uma nova variável, sem valor.
-?
+var valor;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+function exibeValor(valor) {
+  return "O valor da variável agora é " + valor;
+}
 
 // Invoque a função criada acima.
-?
+exibeValor(10);
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+/* O valor da variável agora é 10 */
 
 /*
 Crie uma função com as seguintes características:
@@ -35,19 +39,32 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+
+function calcular1(n1, n2, n3) {
+  var compare1 = typeof n1 === "number";
+  var compare2 = typeof n2 === "number";
+  var compare3 = typeof n3 === "number";
+
+  if (compare1 && compare2 && compare3) {
+    var totalMultiplicacao = n1 * n2 * n3;
+    var resultado = totalMultiplicacao + 2;
+    return resultado;
+  } else {
+    return "Preencha todos os valores corretamente";
+  }
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+calcular1(1, 2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+//'Preencha todos os valores corretamente'
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+calcular1(1, 2, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 8
 
 /*
 Crie uma função com as seguintes características:
@@ -58,8 +75,27 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function calcular2(n1, n2, n3) {
+  var compare1 = typeof n1 === "undefined";
+  var compare2 = typeof n2 === "undefined";
+  var compare3 = typeof n3 === "undefined";
+
+  if (!compare1 && compare2 && compare3) {
+    return n1;
+  } else if (!compare1 && !compare2 && compare3) {
+    return n1 + n2;
+  } else if (!compare1 && !compare2 && !compare3) {
+    return (n1 + n2) / n3;
+  } else if (compare1 && compare2 && compare3) {
+    return false;
+  } else {
+    return null;
+  }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+calcular2(); //false
+calcular2(1); //1
+calcular2(1, 2); // 3
+calcular2(1, 2, 3); // 1
 ```
