@@ -51,4 +51,10 @@ git merge upstream/master
 
 [git PR](https://stackoverflow.com/questions/12660839/pull-request-for-only-certain-files-commits)
 
----
+**6) Renomear branch local**
+
+[git rename branch](https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/)
+
+**7) Mergear arquivos especificos de outra branch**
+
+[git merge](https://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/)
