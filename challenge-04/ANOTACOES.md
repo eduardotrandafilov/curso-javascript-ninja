@@ -1,20 +1,91 @@
 # Anotações Aula , Exercícios & Git
 
-## **Tipos**
+## **Truthy e Falsy**
 
-### Primitivos
+### Truthy
 
-- number
-- string
-- boolean
-- null e undefined
+- é um valor que se traduz em verdadeiro quando avaliado em um contexto booleano.
+- {}
+- todos os outros valores diferentes do falsy
 
-### Objeto
+```js
+//Exemplo de true em js
 
-- todos os outros
-- usado para organizar dados
-- referenciam objetos da vida real
-- funções também são objetos
+var teste;
+
+if ({}) {
+  teste = true;
+} else {
+  teste = false;
+}
+
+// teste imprime true
+```
+
+### Falsy
+
+- é um valor que se traduz em false quando avaliado em um contexto booleano.
+- undefined
+- null
+- NaN
+- 0
+- -0
+- '' (string vazia)
+- ""
+- false
+
+```js
+//Exemplo de falsy em js
+
+var teste;
+
+if (null) {
+  teste = true;
+} else {
+  teste = false;
+}
+
+// teste imprime false
+```
+
+### Representação booleana de um valor sem if através !! (duas exclamações)
+
+> Exclamação inverte o valor booleano
+
+```js
+//valor será false
+
+!!"";
+
+/* 
+
+1º !"" que é um valor true
+
+2º !!"" uso de mais uma exclamação inverterá o valor booleano ficando false 
+
+*/
+```
+
+### Condicional ternário
+
+_*Deve ser utilitado para instruções pequenas*_
+
+```js
+condição ? : true : false;
+```
+
+### Escopo de variáveis
+
+#### Escopo global
+
+- fora de função
+
+#### Escopo local
+
+- dentro de uma função
+- argumentos de função
+
+**_obs: Sempre que criar uma variável utilizar palavra chave var_**
 
 ---
 
