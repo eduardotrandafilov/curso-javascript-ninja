@@ -121,7 +121,7 @@ carro.adicionarPessoas = function (numeroPessoas) {
   var assentosDisponiveis = carro.assentos - carro.quantidadePessoas;
   var concatString = assentosDisponiveis === 1 ? " pessoa " : " pessoas ";
 
-  if (carro.quantidadePessoas < carro.assentos) {
+  if (carro.quantidadePessoas < carro.assentos || numeroPessoas < 0) {
     if (numeroPessoas <= assentosDisponiveis) {
       carro.quantidadePessoas += numeroPessoas;
       return "Já temos " + carro.quantidadePessoas + concatString + "no carro!";
@@ -168,7 +168,7 @@ carro.adicionarPessoas(4);
 carro.adicionarPessoas(3);
 
 // Tire 4 pessoas do carro.
-carro.quantidadePessoas -= 4;
+carro.adicionarPessoas(-4);
 
 // Adicione 10 pessoas no carro.
 carro.adicionarPessoas(10);
