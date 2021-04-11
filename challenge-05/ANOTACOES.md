@@ -1,94 +1,5 @@
 # Anotações Aula , Exercícios & Git
 
-## **Truthy e Falsy**
-
-### Truthy
-
-- é um valor que se traduz em verdadeiro quando avaliado em um contexto booleano.
-- {}
-- todos os outros valores diferentes do falsy
-
-```js
-//Exemplo de true em js
-
-var teste;
-
-if ({}) {
-  teste = true;
-} else {
-  teste = false;
-}
-
-// teste imprime true
-```
-
-### Falsy
-
-- é um valor que se traduz em false quando avaliado em um contexto booleano.
-- undefined
-- null
-- NaN
-- 0
-- -0
-- '' (string vazia)
-- ""
-- false
-
-```js
-//Exemplo de falsy em js
-
-var teste;
-
-if (null) {
-  teste = true;
-} else {
-  teste = false;
-}
-
-// teste imprime false
-```
-
-### Representação booleana de um valor sem if através !! (duas exclamações)
-
-> Exclamação inverte o valor booleano
-
-```js
-//valor será false
-
-!!"";
-
-/* 
-
-1º !"" que é um valor true
-
-2º !!"" uso de mais uma exclamação inverterá o valor booleano ficando false 
-
-*/
-```
-
-### Condicional ternário
-
-_*Deve ser utilitado para instruções pequenas*_
-
-```js
-condição ? : true : false;
-```
-
-### Escopo de variáveis
-
-#### Escopo global
-
-- fora de função
-
-#### Escopo local
-
-- dentro de uma função
-- argumentos de função
-
-**_obs: Sempre que criar uma variável utilizar palavra chave var_**
-
----
-
 ### Comandos git
 
 **1) Adicionar repositório remote:**
@@ -130,3 +41,19 @@ git merge upstream/master
 ```
 git rm -rf <nome_arquivo>
 ```
+
+**9) Copiar um arquivo de uma branch para outra**
+
+- ir para branch para onde deve ser copiado o arquivo (meu caso challenge-05)
+- após estar na branch de destino do arquivo devemos informar a branch de interesse de onde deve ser copiado o arquivo e o caminho onde se encontra esse arquivo na branch (busquei challenge-04:challenge-04/ANOTACOES.md)
+- apos informar o item acima devemos indicar o nome do arquivo ou destino juntamente ao nome que queremos dar ao arquivo copiado (ANOTACOES.md)
+
+**Instrução**
+
+```
+git show challenge-04:challenge-04/ANOTACOES.md > ANOTACOES.md
+```
+
+**Resultado**
+
+![vscode](https://user-images.githubusercontent.com/9969265/114279025-f40f6e80-9a08-11eb-9db2-8efd89d41807.png)
