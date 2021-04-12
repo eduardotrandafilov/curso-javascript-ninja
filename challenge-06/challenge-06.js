@@ -38,9 +38,9 @@ function showTeamPosition(posicao){
   var msg1 = 'O time que está em '+ posicao +' lugar é o '+ teams[indice];
   var msg2 = 'Não temos a informação do time que está nessa posição.';
 
-  while(indice < 5){
+  if(indice >= 0 && indice < 5){
     return msg1;
-  };
+  }
 
   return msg2;
 }
@@ -49,6 +49,7 @@ function showTeamPosition(posicao){
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
+console.log(showTeamPosition(0));
 console.log(showTeamPosition(1));
 console.log(showTeamPosition(2));
 console.log(showTeamPosition(3));
@@ -78,22 +79,29 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     a frase:
     "Não temos o equivalente hexadecimal para [COR]."
 */
-function convertToHex(cor) {
 
+function convertToHex(cor) {
+  var corhexa;
   switch(cor){
     case 'azul':
-      return 'O hexadecimal para a cor '+ cor + ' é '+ '#4290f5' +'.';
+      corhexa = '#4290f5';
+      break;
     case 'vermelho':
-      return 'O hexadecimal para a cor '+ cor + ' é '+ '#eb150e' +'.';
+      corhexa = '#eb150e';
+      break;
     case 'amarelo':
-      return 'O hexadecimal para a cor '+ cor + ' é '+ '#e6d929' +'.';
+      corhexa = '#e6d929';
+      break;
     case 'pink':
-      return 'O hexadecimal para a cor '+ cor + ' é '+ '#e629b7' +'.';
+      corhexa = '#e629b7';
+      break;
     case 'preto':
-      return 'O hexadecimal para a cor '+ cor + ' é '+ '#000000' +'.';
+      corhexa = '#000000';
+      break;
     default:
       return 'Não temos o equivalente hexadecimal para '+ cor + '.';
   }
+  return 'O hexadecimal para a cor '+ cor + ' é '+ corhexa +'.';
 }
 
 /*
@@ -108,5 +116,3 @@ console.log(convertToHex('preto'));
 console.log(convertToHex('purple'));
 console.log(convertToHex('verde'));
 console.log(convertToHex('laranja'));
-
-
