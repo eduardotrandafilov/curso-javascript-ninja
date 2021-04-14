@@ -26,26 +26,22 @@ console.log('O nome da função que faz a soma é '+ sum.name);
 Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
-function showName(nome){
-  return nome;
+function showName(){
+  return 'eduardo';
 }
 
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
 */
-var varShowName = function showName(nome){
-  return nome;
-};
+var varShowName = showName;
 
 /*
 Usando a variável criada acima, mostre no console o nome e o retorno da função
 atribuída a ela, com a seguinte frase:
 "A função [NOME DA FUNÇÃO] retorna [RETORNO DA FUNÇÃO]."
 */
-var nomeFuncao = varShowName.name;
-var retornoFuncao = varShowName(nomeFuncao);
 
-console.log("A função "+ nomeFuncao +" retorna "+ retornoFuncao +" .");
+console.log("A função "+ varShowName.name +" retorna "+ varShowName() +" .");
 
 
 /*
@@ -101,36 +97,29 @@ Declare uma variável chamada `sum`, que receberá a função acima, passando co
 parâmetro o operador de soma.
 */
 
-var sum = calculator;
-console.log(sum('+'));
+var sum = calculator('+');
+
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
 */
-console.log(sum('+')(4,4));
+console.log(sum(4,4));
 
 /*
 Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
 `division` e `mod`, e atribua a elas a função `calculator`, passando o operador
 correto por parâmetro para cada uma delas.
 */
-var subtraction = calculator;
-var multiplication = calculator;
-var division = calculator;
-var mod = calculator;
-
-console.log(subtraction('-'));
-console.log(multiplication('*'));
-console.log(division('/'));
-console.log(mod('%'));
-
-
+var subtraction = calculator('-');
+var multiplication = calculator('*');
+var division = calculator('/');
+var mod = calculator('%');
 
 /*
 Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
 no console.
 */
 
-console.log(subtraction('-')(4,2));
-console.log(multiplication('*')(4,2));
-console.log(division('/')(4,2));
-console.log(mod('%')(4,2));
+console.log(subtraction(4,2));
+console.log(multiplication(4,2));
+console.log(division(4,2));
+console.log(mod(4,2));
